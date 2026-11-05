@@ -8,3 +8,4 @@ All times local, 2026-11-05. Durations are wall-clock.
 | 1 | Scaffold | 19:27 | 19:28 | Next.js 16, Tailwind v4, Framer Motion |
 | 2 | Tokens, components, six screens, landing, /system | 19:28 | 19:35 | Indigo and amber system, Anybody and Instrument Sans |
 | 3 | Visual review, interaction tests, Lighthouse | 19:35 | 19:40 | Hero sizing, EQ proportions; interactions tested in Playwright at 6 viewports; local Lighthouse mobile 100/100/100 on both pages |
+| 4 | README, gitleaks, GitHub, Vercel | 19:40 | 19:50 | gitleaks clean; public repo pushed; Vercel CLI blocked (api.vercel.com timing out), project imported in the dashboard after the user entered 2FA; deployment Ready on commit d3a980b |

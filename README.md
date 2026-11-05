@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SoundPlus redesign concept
 
-## Getting Started
+**Redesign concept by DC Tech, not the official site.** An unofficial concept for the owner of [SoundPlus](https://music.graphikrafts.com/). SoundPlus belongs to GraphiKrafts. Nothing here is affiliated with or endorsed by them.
 
-First, run the development server:
+Live: https://soundplus-redesign-concept.vercel.app
+
+- `/` landing page: hero, six features, six app screens, install, spec block, FAQ
+- `/system` design system: colour, type, spacing, radii and core components with their states
+
+The download and web player buttons go to the real URLs on the current site. The pages are `noindex`, so the concept can't compete with the real site in search.
+
+## Stack
+
+Next.js (App Router, TypeScript, Tailwind v4), Framer Motion. Fully static, no backend.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design notes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Colour: indigo surfaces and a single amber accent. Amber always means playing, active or selected.
+- Type: Anybody (condensed, heavy) for titles, Instrument Sans for UI.
+- The idea: five bands. Five amber EQ bars sit behind the hero phone and keep moving when the phone's screen turns off, which is the product's main promise. Press the phone's side button to try it.
+- The phone screens are HTML and CSS on a fixed 360px canvas, scaled with one CSS variable. Now playing and Equalizer are interactive (play/pause, seek, band drag, presets, keyboard support).
+- Tracks, artists and album art are fictional.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## What the current site contradicts
 
-## Learn More
+| Item | Current site says | Concept uses |
+|---|---|---|
+| Version | `1.6.0 (Build 17)` in the hero, `v1.0.8` in the guides section ("Direct APK Mirror") | 1.6.0 (build 17) |
+| Minimum Android | `Android 8.0+` in the hero, `Android 5.0+` in two CTA blocks and the architecture section | 8.0+ |
+| APK size | `18.5 MB` throughout | 19.7 MB |
 
-To learn more about Next.js, take a look at the following resources:
+Checked against the APK served on 2026-11-05 (19,716,697 bytes): the manifest reports version 1.6.0, build 17 and `minSdkVersion 24`, which is Android 7.0, so the real minimum matches neither number on the site. The concept keeps 8.0+ as the hero's stated figure.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content changes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Removed as unverifiable: 100M+ songs, 99.9% uptime, "hardware DSP", "1,500 dB headroom", "safe and legal". The mod and ReVanced sections are gone too. Feature copy is rewritten from the current site's claims and was not tested against the app. The non-affiliation disclaimer is kept word for word.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Demo by [DC Tech](https://dctechltd.com)

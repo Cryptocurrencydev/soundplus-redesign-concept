@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Anybody, Instrument_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { ConceptBanner } from "@/components/site/ConceptBanner";
 import { Footer } from "@/components/site/Footer";
 import { Nav } from "@/components/site/Nav";
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Nav />
         <main id="main">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
